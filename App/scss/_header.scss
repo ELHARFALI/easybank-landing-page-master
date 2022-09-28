@@ -6,6 +6,23 @@
     height: 75px;
     padding: 16px 0;
 
+    @include large {
+        .header__btn {
+            display: none;
+        }
+    }
+
+    .overlay.is-active {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        height: calc(100vh - 75px);
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.12);
+        // background-color: red;
+        z-index: 1;
+    }
+
 
     &__container {
         max-width: 80%;
@@ -17,17 +34,50 @@
         position: relative;
 
         .navbar {
+            transition: all 0.4s ease-in-out;
+            z-index: 2;
+
+            @include large-tablete {
+                width: 100%;
+                position: absolute;
+                top: 75px;
+                left: -150%;
+            }
+
+            &.active {
+                left: 0;
+            }
+
 
             ul {
                 display: flex;
+                background-color: $White;
+
+                @include large-tablete {
+                    text-align: center;
+                    flex-direction: column;
+                    padding: 30px;
+                    
+                    // gap: 10px;
+                }
 
                 li {
+
+                    @include large-tablete {
+                        &:not(:last-child) {
+                            padding-bottom: 20px;
+                        }
+                    }
 
                     a {
                         display: inline-block;
                         margin: 0 32px;
                         font-weight: 400;
                         color: $GrayishBlue;
+
+                        @include large-tablete {
+                            color: $DarkBlue;
+                        }
                     }
                 }
             }
@@ -39,7 +89,12 @@
             height: 40px;
             position: absolute;
             right: 10px;
-            top: 25px;
+            top: 10px;
+            cursor: pointer;
+
+            @include large-tablete {
+                display: block;
+            }
 
             span {
                 display: block;
