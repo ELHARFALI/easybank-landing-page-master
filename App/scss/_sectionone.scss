@@ -1,0 +1,60 @@
+
+.section__1 {
+    background-color: $LightGrayishBlue;
+    padding: 115px 0;
+
+    .container {
+        width: 80%;
+        margin: auto;
+
+        .title {
+            max-width: 750px;
+
+            h1 {
+                font-size: 45px;
+                font-weight: 300;
+                margin-bottom: 35px;
+                color: $DarkBlue;
+            }
+
+            p {
+                margin-bottom: 75px;
+                line-height: 1.6;
+                font-size: 20px;
+                color: $GrayishBlue;
+            }
+        }
+
+        .cards {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 50px;
+
+            @media (max-width: 828px) {
+                text-align: center;
+            }
+
+            .card {
+                max-width: 300px;
+                margin: 0 auto;
+
+                .icon {
+                    margin-bottom: 45px;
+                }
+
+                .title {
+                        font-size: 28px;
+                        font-weight: 300;
+                        color: $DarkBlue;
+                        margin-bottom: 30px;
+                }
+
+                .description {
+                    color: $GrayishBlue;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+}
