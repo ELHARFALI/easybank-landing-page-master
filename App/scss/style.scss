@@ -1,0 +1,35 @@
+@import 'variables';
+@import 'header';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Public Sans', sans-serif;
+    font-size: $Fontsize;
+    background-color: #fff;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn-primary {
+    border: none;
+    outline: none;
+    background: none;
+    background-image: linear-gradient(to right top, #31d06c, #00cd91, #00c8ae, #00c2c1, #2bbaca);
+    padding: 15px 33px;
+    border-radius: 50px;
+    cursor: pointer;
+    color: $White;
+    font-weight: 700;
+}
