@@ -1,6 +1,7 @@
 @import 'variables';
 @import 'mixins';
 @import 'header';
+@import 'main';
 
 * {
     margin: 0;
@@ -12,7 +13,7 @@
 body {
     font-family: 'Public Sans', sans-serif;
     font-size: $Fontsize;
-    background-color: #999;
+    min-height: 200vh;
 }
 
 li {
@@ -33,4 +34,9 @@ a {
     cursor: pointer;
     color: $White;
     font-weight: 700;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
 }

@@ -5,6 +5,7 @@
     width: 100%;
     height: 75px;
     padding: 16px 0;
+    z-index: 10;
 
     @include large {
         .header__btn {
@@ -74,8 +75,13 @@
                         margin: 0 32px;
                         font-weight: 400;
                         color: $GrayishBlue;
+                        transition: all 0.3s ease-in-out;
 
                         @include large-tablete {
+                            color: $DarkBlue;
+                        }
+
+                        &:hover {
                             color: $DarkBlue;
                         }
                     }
