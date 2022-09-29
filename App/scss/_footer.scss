@@ -1,0 +1,110 @@
+@import 'mixins';
+
+.footer {
+    background-color: $DarkBlue;
+    width: 100%;
+    max-width: 100%;
+    padding: 46px;
+
+    .container {
+        width: 100%;
+        margin: auto 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 50px;
+
+        .col__one {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 55px;
+
+            .icons {
+                display: flex;
+                gap: 15px;
+
+                img {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .col__two {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 60px;
+            color: #fff;
+            
+            .one {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                h3 {
+                    font-size: 18px;
+                    font-weight: 400;
+                    transition: all 0.2s ease-in-out;
+                    cursor: pointer;
+
+                        &:hover {
+
+                        color: $LimeGreen;
+                        }
+
+                    &:not(:last-child) {
+                        margin-bottom: 19px;
+                    }
+                }
+            }
+
+            .two {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                h3 {
+                    font-size: 18px;
+                    font-weight: 400;
+                    transition: all 0.2s ease-in-out;
+                    cursor: pointer;
+
+                        &:hover {
+
+                        color: $LimeGreen;
+                        }
+
+                    &:not(:last-child) {
+                        margin-bottom: 19px;
+                    }
+                }
+            }
+        }
+
+        .col__three {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .btn {
+                margin-bottom: 25px;
+            }
+
+            .copy {
+                color: $White;
+            }
+        }
+
+        .empty {
+
+            @media (max-width: 1670px) {
+                display: none;
+            }
+        }
+    }
+}
